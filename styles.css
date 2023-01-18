@@ -1,0 +1,197 @@
+.body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.painting-frame {
+    box-shadow: 5px 5px 10px #666;
+    display: flex;
+    margin: 10px;
+    width: 778px;
+    height: 800px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.triangle {
+    clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0 60%);
+    background-color: #221e1d;
+    height: 800px;
+}
+
+
+
+.triangle2 {
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    background-color: #ad2110;
+    width: 100%;
+    height: 100%;
+}
+
+.triangle3 {
+    clip-path: polygon(100% 0, 0 100%, 0 0);
+    background-color: #989ea6;
+    width: 25pc;
+    height: 30pc;
+    position: absolute;
+    z-index: -2;
+}
+
+.triangle4 {
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background-color: #c9993d;
+    width: 20pc;
+    height: 25pc;
+    position: absolute;
+    z-index: -3;
+    top: 27pc;
+}
+
+.triangle5 {
+    clip-path: polygon(100% 100%, 50% 0, 0 100%);    background-color: #ccbfb0;
+    width: 25pc;
+    height: 12pc;
+    position: absolute;
+    z-index: -5;
+    top: 40pc;
+    scale: 1.07;
+}
+
+.triangle6 {
+    clip-path: polygon(0 0, 28% 0, 100% 59%, 0% 100%);
+    background-color: #d2cbc3;
+    width: 15pc;
+    height: 25pc;
+    position: absolute;
+    z-index: -2;
+}
+
+.triangle7 {
+    clip-path: polygon(0 0, 100% 0, 48% 50%);
+    background-color: #6c6263;
+    width: 25pc;
+    height: 26pc;
+    position: absolute;
+    z-index: -2;
+}
+
+.triangle8 {
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    background-color: #aaafae;
+    width: 25pc;
+    height: 30pc;
+    position: absolute;
+    top: 22pc;
+    z-index: -3;
+    scale: 1.01;
+}
+
+.triangle_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+.interactive_painting-frame {
+    box-shadow: 5px 5px 10px #666;
+    display: flex;
+    margin: 10px;
+    width: 778px;
+    height: 800px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.interactive_triangle {
+    clip-path: polygon(0 35%, 100% 0%, 100% 100%, 0 60%);
+    background-color: #221e1d;
+    height: 800px;
+
+}
+
+
+
+.interactive_triangle2 {
+    clip-path: polygon(0 50%, 100% 100%, 100% 0);
+    background-color: #ad2110;
+    width: 100%;
+    height: 100%;
+}
+
+.interactive_triangle3 {
+    clip-path: polygon(100% 0, 0 100%, 0 0);
+    background-color: #989ea6;
+    width: 25pc;
+    height: 30pc;
+    position: absolute;
+    z-index: -2;
+}
+
+.interactive_triangle4 {
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    background-color: #c9993d;
+    width: 20pc;
+    height: 25pc;
+    position: absolute;
+    z-index: -3;
+    top: 27pc;
+}
+
+.interactive_triangle5 {
+    clip-path: polygon(100% 100%, 50% 0, 0 100%);    background-color: #ccbfb0;
+    width: 25pc;
+    height: 12pc;
+    position: absolute;
+    z-index: -5;
+    top: 40pc;
+    scale: 1.07;
+}
+
+.interactive_triangle6 {
+    clip-path: polygon(0 0, 28% 0, 100% 59%, 0% 100%);    background-color: #d2cbc3;
+    width: 15pc;
+    height: 25pc;
+    position: absolute;
+    z-index: -2;
+}
+
+.interactive_triangle7 {
+    clip-path: polygon(0 0, 100% 0, 48% 50%);
+    background-color: #6c6263;
+    width: 25pc;
+    height: 26pc;
+    position: absolute;
+    z-index: -2;
+}
+
+.interactive_triangle8 {
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    background-color: #aaafae;
+    width: 25pc;
+    height: 30pc;
+    position: absolute;
+    top: 22pc;
+    z-index: -3;
+    scale: 1.01;
+}
+
+.interactive_triangle_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.animate__animated {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+.animate__bounce {
+    animation-name: animate__bounce;
+}

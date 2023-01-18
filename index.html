@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
+    <title>Assignment 3: CSS Painting Animation </title>
+
+</head>
+<body class="body">
+<div class="interactive_painting-frame">
+    <div class="interactive_triangle_container">
+        <div class="interactive_triangle click"></div>
+        <div class="interactive_triangle3 click"></div>
+        <div class="interactive_triangle4 click"></div>
+        <div class="interactive_triangle5 click"></div>
+    </div>
+    <div class="interactive_triangle_container">
+        <div class="interactive_triangle2 click"></div>
+        <div class="interactive_triangle6 click"></div>
+        <div class="interactive_triangle7 click"></div>
+        <div class="interactive_triangle8 click"></div>
+    </div>
+    </div>
+<div class="painting-frame">
+    <div class="triangle_container">
+        <div class="triangle"></div>
+        <div class="triangle3"></div>
+        <div class="triangle4"></div>
+        <div class="triangle5"></div>
+    </div>
+    <div class="triangle_container">
+        <div class="triangle2"></div>
+        <div class="triangle6"></div>
+        <div class="triangle7"></div>
+        <div class="triangle8"></div>
+    </div>
+</div>
+</body>
+<script>
+
+    const container = document.querySelector('.interactive_painting-frame');
+    const triangles = document.querySelectorAll('.click');
+    function findClosestPoint(clipPathValuesNum, mouseX, mouseY, triangleX, triangleY) {
+        let closestPoint = clipPathValuesNum[0];
+        let closestDistance = Math.hypot(closestPoint[0] - mouseX, closestPoint[1] - mouseY);
+        clipPathValuesNum.forEach((point, index) => {
+            const distance = Math.hypot(point[0] - mouseX, point[1] - mouseY);
+            if (distance < closestDistance) {
+                closestDistance = distance;
+                closestPoint = point;
+            }
+        });
+        return closestPoint;
+    }
+    // For each triangle get the clip path and add it to an array
+    const clipPaths = [];
+    triangles.forEach(triangle => {
+        const clipPath = window.getComputedStyle(triangle, null).getPropertyValue('clip-path');
+        clipPaths.push(clipPath);
+    });
+    // Add a mousemove event listener to the container
+    container.addEventListener('mousemove', function(event) {
+        // Get the container dimensions
+
+
+
+        // Loop through each triangle
+        triangles.forEach(triangle => {
+
+            // Get the triangle dimensions
+            const triangleRect = triangle.getBoundingClientRect();
+            // Get the mouse position relative to the triangle
+            const mouseX = event.clientX - triangleRect.left;
+            const mouseY = event.clientY - triangleRect.top;
+            // The container is 700x 800y Convert the mouse position to a percentage
+            const mouseXPercent = (mouseX / triangleRect.width) * 100;
+            const mouseYPercent = (mouseY / triangleRect.height) * 100;
+
+            // Check if the mouse is inside the triangle
+
+            // Get the triangles clip path
+            const clipPath = window.getComputedStyle(triangle, null).getPropertyValue('clip-path');
+            // Get the triangles clip path values
+            const clipPathValues = clipPath.match(/-?\d+/g);
+            // Get the triangles clip path values as numbers
+            const clipPathValuesNum = clipPathValues.map(Number);
+            // Check if the mouse is inside the triangle
+            if (mouseX > triangleRect.left && mouseX < triangleRect.right && mouseY > triangleRect.top && mouseY < triangleRect.bottom) {
+
+
+
+
+
+            }
+
+        });
+
+    });
+
+
+
+
+
+</script>
+</html>
